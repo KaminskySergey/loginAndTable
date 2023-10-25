@@ -23,7 +23,7 @@ import "../../app/globals.css";
 import { selectIsAuth } from "@/src/redux/user/selectorUser";
 import { useRouter } from "next/router";
 import { userValidSchema } from "@/src/helpers/loginValidate";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const LoginComponent = () => {
@@ -38,11 +38,23 @@ export const LoginComponent = () => {
       route.push("/");
     }
   }, [isAuth, route]);
+
+  const successToast = () => {
+    toast.success("Success", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
+
+  const errorToast = () => {
+    toast.error("Error", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
   return (
     <>
       <Container>
         <div className="box"></div>
-        <ToastContainer />
+
         <Wrapper>
           <Title>Login</Title>
           <Formik
@@ -57,9 +69,7 @@ export const LoginComponent = () => {
 
                 const result = await dispatch(login(values));
                 if (result.type === "/login/fulfilled") {
-                  toast.success("Success", {
-                    position: toast.POSITION.TOP_CENTER,
-                  });
+                  successToast();
                   setIsSuccess("Authentication successful.");
                   resetForm();
                 }
@@ -69,9 +79,7 @@ export const LoginComponent = () => {
                 ) {
                   resetForm();
                   setIsSuccess("");
-                  toast.error("Error", {
-                    position: toast.POSITION.TOP_CENTER,
-                  });
+                  errorToast();
                   setIsError("Not valid username or password!!!");
                 }
               } catch (err: unknown) {

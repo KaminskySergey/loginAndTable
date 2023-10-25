@@ -1,5 +1,6 @@
 import { Main } from "./layout.styled";
 
+
 const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
     <>

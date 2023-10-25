@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
-      {/* <ToastContainer /> */}
+      <ToastContainer />
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Component {...pageProps} />
