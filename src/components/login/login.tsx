@@ -23,7 +23,7 @@ import "../../app/globals.css";
 import { selectIsAuth } from "@/src/redux/user/selectorUser";
 import { useRouter } from "next/router";
 import { userValidSchema } from "@/src/helpers/loginValidate";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const LoginComponent = () => {
@@ -42,6 +42,7 @@ export const LoginComponent = () => {
     <>
       <Container>
         <div className="box"></div>
+        <ToastContainer />
         <Wrapper>
           <Title>Login</Title>
           <Formik
