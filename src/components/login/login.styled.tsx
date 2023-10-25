@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Field, Form, ErrorMessage } from "formik";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { FaCheck } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { ButtonDefault } from "../button/button";
 
 export const Container = styled.div`
   display: flex;

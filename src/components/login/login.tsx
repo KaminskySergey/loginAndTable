@@ -1,11 +1,9 @@
-import { Formik, Field, Form, ErrorMessage, useFormik } from "formik";
-import * as Yup from "yup";
+import { Formik } from "formik";
 import { useState } from "react";
 import { Vortex } from "react-loader-spinner";
 import {
   Button,
   CheckIcon,
-  ContInput,
   Container,
   ErrorText,
   FormContainer,
@@ -58,7 +56,6 @@ export const LoginComponent = () => {
 
                 const result = await dispatch(login(values));
                 if (result.type === "/login/fulfilled") {
-                  // route.push("/");
                   toast.success("Success", {
                     position: toast.POSITION.TOP_CENTER,
                   });
@@ -110,7 +107,7 @@ export const LoginComponent = () => {
                   <ErrorText name="username" component="div" />
                 </Label>
                 <Label htmlFor="password">
-                  {values.username.length >= 5 ? (
+                  {values.password.length >= 5 ? (
                     <CheckIcon />
                   ) : (
                     <IconPassword />

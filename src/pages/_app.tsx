@@ -3,7 +3,6 @@ import { Provider } from "react-redux";
 import { createGlobalStyle } from "styled-components";
 import { persistor, store } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
-import { ToastContainer } from "react-toastify";
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -19,7 +18,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Component {...pageProps} />
-          {/* <ToastContainer /> */}
         </PersistGate>
       </Provider>
     </>
