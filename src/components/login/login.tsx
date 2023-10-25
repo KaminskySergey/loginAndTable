@@ -66,6 +66,7 @@ export const LoginComponent = () => {
                   result.type === "/login/rejected" ||
                   result.payload.code === "ERR_BAD_REQUEST"
                 ) {
+                  resetForm();
                   setIsSuccess("");
                   toast.error("Error", {
                     position: toast.POSITION.TOP_CENTER,
@@ -76,6 +77,7 @@ export const LoginComponent = () => {
                 console.log(err);
               } finally {
                 setIsLoading(false);
+                resetForm();
               }
             }}
           >

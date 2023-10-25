@@ -10,7 +10,7 @@ export const Header = styled.header`
   background-color: black;
   display: flex;
   align-items: center;
-  z-index: 2;
+  z-index: 30;
 `;
 
 export const Button = styled.button`

@@ -21,7 +21,7 @@ export const CustomPagination = ({
     onPageChange(page);
   };
   return (
-    <Container>
+    <Container style={{ padding: "8px" }}>
       <Stack spacing={2}>
         <Pagination
           count={totalPages}

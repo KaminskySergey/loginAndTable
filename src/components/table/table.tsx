@@ -4,7 +4,7 @@ import { HeaderComponent } from "../header/header";
 import Layout from "../layout/layout";
 import TableItem from "./components/table-item/table-item";
 import TableList from "./components/table-list/table-list";
-import { BackdropImage, Container, Title } from "./table.styled";
+import { BackdropImage, Bg, Container, Title } from "./table.styled";
 import { CustomPagination } from "../pagination/pagination";
 import { useAppDispatch, useAppSelector } from "@/src/hooks/redux";
 import { selectCountActors } from "@/src/redux/actors/selectorActors";
@@ -28,9 +28,10 @@ export const TableComponent = () => {
 
   return (
     <Layout>
+      <Bg></Bg>
+      <BackdropImage></BackdropImage>
       <HeaderComponent />
       <Container>
-        <BackdropImage></BackdropImage>
         <TableList>
           <Title>Always remember that &ldquo;Winter Is Coming&rdquo;</Title>
           <TableItem />
