@@ -47,7 +47,7 @@ export const LoginComponent = () => {
     if (isAuth) {
       route.push("/");
     }
-  }, []);
+  }, [isAuth, route]);
   return (
     <>
       <Container className="box">
