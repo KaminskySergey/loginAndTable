@@ -4,8 +4,6 @@ import { createGlobalStyle } from "styled-components";
 import { persistor, store } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { BackdropImage } from "../components/table/table.styled";
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -17,16 +15,13 @@ const GlobalStyle = createGlobalStyle`
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div style={{ position: "relative" }}>
-        <BackdropImage></BackdropImage>
-        <GlobalStyle />
-        <ToastContainer />
-        <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
-            <Component {...pageProps} />
-          </PersistGate>
-        </Provider>
-      </div>
+      <GlobalStyle />
+      <ToastContainer />
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Component {...pageProps} />
+        </PersistGate>
+      </Provider>
     </>
   );
 }

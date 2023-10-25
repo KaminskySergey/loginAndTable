@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   padding: 96px 0;
-  /* width: 1440px; */
+  width: 1440px;
   padding: 64px 16px;
   margin: 0 auto;
 `;

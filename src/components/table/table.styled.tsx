@@ -5,9 +5,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 32px;
-`;
-
-export const Bg = styled.div`
   background-image: url("/backdropTable.jpg");
   background-size: cover;
   background-position: center;
@@ -25,8 +22,7 @@ export const BackdropImage = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
 `;
 
