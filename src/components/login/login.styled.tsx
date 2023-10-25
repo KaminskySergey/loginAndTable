@@ -28,6 +28,7 @@ export const Wrapper = styled.div`
   padding: 16px 32px;
   backdrop-filter: blur(3px);
   border: 1px solid #0791fa;
+  z-index: 20;
 `;
 
 export const FormContainer = styled(Form)`

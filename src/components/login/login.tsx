@@ -40,7 +40,7 @@ export const LoginComponent = () => {
   }, [isAuth, route]);
   return (
     <>
-      <Container className="box">
+      <Container>
         <div className="box"></div>
         <Wrapper>
           <Title>Login</Title>
