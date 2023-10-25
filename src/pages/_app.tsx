@@ -3,6 +3,8 @@ import { Provider } from "react-redux";
 import { createGlobalStyle } from "styled-components";
 import { persistor, store } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -15,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+      <ToastContainer />
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Component {...pageProps} />

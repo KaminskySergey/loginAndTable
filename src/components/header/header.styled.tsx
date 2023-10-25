@@ -5,7 +5,7 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: 50px;
   padding: 4px 32px;
   background-color: black;
   display: flex;
@@ -20,4 +20,5 @@ export const Button = styled.button`
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
+  height: 32px;
 `;

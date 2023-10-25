@@ -10,7 +10,6 @@ import { useAppDispatch, useAppSelector } from "@/src/hooks/redux";
 import { selectCountActors } from "@/src/redux/actors/selectorActors";
 import { useEffect } from "react";
 import { getActors } from "@/src/redux/actors/thunkActors";
-import { ToastContainer } from "react-toastify";
 export const TableComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const dispatch = useAppDispatch();
@@ -30,7 +29,6 @@ export const TableComponent = () => {
   return (
     <Layout>
       <HeaderComponent />
-      <ToastContainer />
       <Container>
         <BackdropImage></BackdropImage>
         <TableList>

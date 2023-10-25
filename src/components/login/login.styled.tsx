@@ -12,8 +12,9 @@ export const Container = styled.div`
   background-image: url("/backdrop.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  position: fixed;
+  /* background-attachment: fixed; */
+  /* position: fixed; */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

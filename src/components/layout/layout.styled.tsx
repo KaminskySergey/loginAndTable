@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Main = styled.main`
   padding: 96px 0;
   width: 1440px;
-  padding: 96px 16px;
+  padding: 64px 16px;
   margin: 0 auto;
-  height: 700px;
 `;
 
 export const Box = styled.div`

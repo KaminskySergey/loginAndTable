@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 64px;
-  background-image: url("/backdropTable.png");
+  background-image: url("/backdropTable.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -27,8 +27,8 @@ export const BackdropImage = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 32px;
-  margin-bottom: 32px;
+  font-size: 24px;
+  margin-bottom: 16px;
   color: white;
   text-align: center;
   text-decoration: underline;
