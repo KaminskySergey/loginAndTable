@@ -18,23 +18,15 @@ import {
   TitleLoader,
   Wrapper,
 } from "./login.styled";
-import { initialLogin } from "@/src/consts/initLogin";
 import { useAppDispatch, useAppSelector } from "@/src/hooks/redux";
 import { login } from "@/src/redux/user/thunkUser";
 import { useEffect } from "react";
 import "../../app/globals.css";
 import { selectIsAuth } from "@/src/redux/user/selectorUser";
-import { store } from "@/src/redux/store";
-import { redirect } from "next/navigation";
 import { useRouter } from "next/router";
 import { userValidSchema } from "@/src/helpers/loginValidate";
-import { isLogin } from "../isAuth/isAuth";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-type ILogin = {
-  username: string;
-  password: string;
-};
 
 export const LoginComponent = () => {
   const dispatch = useAppDispatch();
@@ -92,8 +84,6 @@ export const LoginComponent = () => {
           >
             {({
               values,
-              errors,
-              touched,
               handleChange,
               handleBlur,
               isValid,

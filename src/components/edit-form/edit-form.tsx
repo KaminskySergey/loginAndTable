@@ -10,7 +10,6 @@ import {
 } from "./edit-form.styled";
 import { IActors, IValuesEditForm } from "@/src/types/user.type";
 import { updateActors } from "@/src/redux/actors/thunkActors";
-import { toast, ToastContainer } from "react-toastify";
 import { validationSchemaEdit } from "@/src/helpers/editValidate";
 
 interface IEditForm {
@@ -46,7 +45,6 @@ export const EditForm = ({ handleToggle, currentActor }: IEditForm) => {
 
   return (
     <>
-      <ToastContainer />
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchemaEdit}
