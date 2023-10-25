@@ -126,11 +126,7 @@ export const LoginComponent = () => {
                   />
                   <ErrorText name="password" component="div" />
                 </Label>
-                <Button
-                  disabled={!isValid || !dirty}
-                  onClick={() => handleSubmit()}
-                  type="submit"
-                >
+                <Button disabled={!isValid || !dirty} type="submit">
                   Login
                 </Button>
                 {isLoading && (
