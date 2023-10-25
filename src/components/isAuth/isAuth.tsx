@@ -12,7 +12,7 @@ export const isAuth = (Component: any) => {
       if (!auth) {
         return router.push("/auth/login");
       }
-    }, []);
+    }, [auth, router]);
 
     if (!auth) {
       return null;
